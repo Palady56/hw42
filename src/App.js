@@ -4,6 +4,8 @@ import { Routes, Route, NavLink } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Team from "./pages/Team";
+import History from "./pages/History";
 
 function App() {
   return (
@@ -15,7 +17,10 @@ function App() {
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About />} >
+          <Route path="team" element={<Team />} />
+          <Route path="history" element={<History />} />
+        </Route>
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
